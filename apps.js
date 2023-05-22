@@ -41,7 +41,7 @@ const userSignUp = async () => {
       alert("Sua conta foi criada com sucesso!");
     })
     .catch((error) => {
-      alert("Email ja cadastrado, inisira outros dados!");
+      alert("Email ja cadastrado, ou senha errada!");
       //   const errorCode = error.code;
       //   const errorMessage = error.message;
       //   console.log(errorCode + errorMessage);
