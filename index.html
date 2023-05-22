@@ -14,20 +14,22 @@
             <img src="walk-in-the-city-animate.svg" class="left-img" alt="Jovem">
         </div>
         <div class="right-login">
-            <div class="card-login">
-                <h1>LOGIN</h1>
+            <div class="card-login" id="authForm">
+                <h1>Email</h1>
                 <div class="textfield">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <label for="usuario">Email</label>
+                    <input type="email" name="usuario" placeholder="exemple@gmail.com" id="userEmail">
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" placeholder="senha" id="userPassword" />
                 </div>
-                <button class="btn-login">Login</button>
-                <button class="btn-login">Cadastro</button>
+                <button class="btn-login" id="signInButton">Login</button>
+                <button class="btn-login" id="signUpButton">Cadastro</button>
             </div>
         </div>
     </div>
+    <script type="module" src="apps.js">
+    </script>
 </body>
 </html>
