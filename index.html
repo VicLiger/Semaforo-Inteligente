@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <link rel="stylesheet" href="site2.css">
-</head>
-<body>
+    <link rel="stylesheet" href="site2.css" />
+  </head>
+  <body>
     <div class="main-login">
-        <div class="left-login">
-            <h1>Faça Login <br>E acesse o Semaforo Inteligente</h1>
-            <img src="walk-in-the-city-animate.svg" class="left-img" alt="Jovem">
+      <div class="left-login">
+        <h1>Faça Login <br />E acesse o Semaforo Inteligente</h1>
+        <img src="walk-in-the-city-animate.svg" class="left-img" alt="Jovem" />
+      </div>
+      <div class="right-login">
+        <div class="card-login">
+          <h1>Login</h1>
+          <div class="textfield">
+            <label for="usuario">Email</label>
+            <input
+              type="email"
+              name="usuario"
+              placeholder="exemple@gmail.com"
+              id="userEmail" />
+          </div>
+          <div class="textfield">
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="senha" id="userPassword" />
+          </div>
+          <button class="btn-login" id="signInButton">Login</button>
+          <button class="btn-login" id="signUpButton">Cadastro</button>
         </div>
-        <div class="right-login">
-            <div class="card-login" id="authForm">
-                <h1>Email</h1>
-                <div class="textfield">
-                    <label for="usuario">Email</label>
-                    <input type="email" name="usuario" placeholder="exemple@gmail.com" id="userEmail">
-                </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" placeholder="senha" id="userPassword" />
-                </div>
-                <button class="btn-login" id="signInButton">Login</button>
-                <button class="btn-login" id="signUpButton">Cadastro</button>
-            </div>
-        </div>
+      </div>
+      <div id="secretContent" class="loginSucess">
+        <h3>Bem vindo!</h3>
+        <button class="btn-login" id="signOutButton">Sair</button>
+      </div>
     </div>
-    <script type="module" src="apps.js">
-    </script>
-</body>
+    <script type="module" src="apps.js"></script>
+  </body>
 </html>

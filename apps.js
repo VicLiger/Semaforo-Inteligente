@@ -25,9 +25,11 @@ const auth = getAuth(app);
 
 const userEmail = document.querySelector("#userEmail");
 const userPassword = document.querySelector("#userPassword");
+const authForm = document.querySelector(".right-login");
+const secretContent = document.querySelector("#secretContent");
 const signUpButton = document.querySelector("#signUpButton");
 const signInButton = document.querySelector("#signInButton");
-const authForm = document.querySelector("#authForm");
+const signOutButton = document.querySelector("#signOutButton");
 
 const userSignUp = async () => {
   const signUpEmail = userEmail.value;
@@ -39,28 +41,47 @@ const userSignUp = async () => {
       alert("Sua conta foi criada com sucesso!");
     })
     .catch((error) => {
-      alert("Email ja cadastrado, inisira outros dados!")
-    //   const errorCode = error.code;
-    //   const errorMessage = error.message;
-    //   console.log(errorCode + errorMessage);
+      alert("Email ja cadastrado, inisira outros dados!");
+      //   const errorCode = error.code;
+      //   const errorMessage = error.message;
+      //   console.log(errorCode + errorMessage);
     });
 };
 
 const userSignIn = async () => {
-    const signInEmail = userEmail.value;
-    const signInPassword = userPassword.value;
-    signInWithEmailAndPassword(auth, signInEmail, signInPassword)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        alert("Você está cadastrado!");
-      })
-      .catch((error) => {
-        alert("Email não cadastrado, inisira outros dados!")
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-        // console.log(errorCode + errorMessage);
-      });
-  };
+  const signInEmail = userEmail.value;
+  const signInPassword = userPassword.value;
+  signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      alert("Login com sucesso!");
+    })
+    .catch((error) => {
+      alert("Email não cadastrado, inisira outros dados!");
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+      // console.log(errorCode + errorMessage);
+    });
+};
+
+const checkAuthState = async () => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      authForm.style.display = "none";
+      secretContent.style.display = "block";
+    } else {
+      authForm.style.display = "block";
+      secretContent.style.display = "none";
+    }
+  });
+};
+
+const userSignOut = async () => {
+  await signOut(auth);
+};
+
+checkAuthState();
 
 signUpButton.addEventListener("click", userSignUp);
 signInButton.addEventListener("click", userSignIn);
+signOutButton.addEventListener("click", userSignOut);
