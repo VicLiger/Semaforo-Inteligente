@@ -41,7 +41,7 @@ const userSignUp = async () => {
       alert("Sua conta foi criada com sucesso!");
     })
     .catch((error) => {
-      alert("Email ja cadastrado, ou senha errada!");
+      alert("Email ja cadastrado, ou senha com menos de 6 digitos!");
       //   const errorCode = error.code;
       //   const errorMessage = error.message;
       //   console.log(errorCode + errorMessage);
@@ -57,7 +57,7 @@ const userSignIn = async () => {
       alert("Login com sucesso!");
     })
     .catch((error) => {
-      alert("Email não cadastrado, inisira outros dados!");
+      alert("Email não cadastrado, ou senha errada!");
       // const errorCode = error.code;
       // const errorMessage = error.message;
       // console.log(errorCode + errorMessage);
