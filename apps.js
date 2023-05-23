@@ -2,7 +2,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
@@ -27,26 +26,8 @@ const userEmail = document.querySelector("#userEmail");
 const userPassword = document.querySelector("#userPassword");
 const authForm = document.querySelector(".right-login");
 const secretContent = document.querySelector("#secretContent");
-const signUpButton = document.querySelector("#signUpButton");
 const signInButton = document.querySelector("#signInButton");
 const signOutButton = document.querySelector("#signOutButton");
-
-const userSignUp = async () => {
-  const signUpEmail = userEmail.value;
-  const signUpPassword = userPassword.value;
-  createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-      alert("Sua conta foi criada com sucesso!");
-    })
-    .catch((error) => {
-      alert("Email ja cadastrado, ou senha com menos de 6 digitos!");
-      //   const errorCode = error.code;
-      //   const errorMessage = error.message;
-      //   console.log(errorCode + errorMessage);
-    });
-};
 
 const userSignIn = async () => {
   const signInEmail = userEmail.value;
@@ -81,7 +62,5 @@ const userSignOut = async () => {
 };
 
 checkAuthState();
-
-signUpButton.addEventListener("click", userSignUp);
 signInButton.addEventListener("click", userSignIn);
 signOutButton.addEventListener("click", userSignOut);
