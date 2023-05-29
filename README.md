@@ -3,5 +3,5 @@ O projeto "Semáforo Inteligente" é uma iniciativa desenvolvida pelos membros D
 O objetivo desse projeto é criar um sistema de controle de tráfego urbano mais eficiente e seguro, utilizando tecnologias avançadas. <br>
 Projeto da matéria Engenharia de Software
 
-Link: https://vicliger.github.io/Semaforo-Inteligente/
+Link: https://vicliger.github.io/Semaforo-Inteligente/ <br>
 Link do perfil do usuário: https://semaforoautomatico.my.canva.site/
