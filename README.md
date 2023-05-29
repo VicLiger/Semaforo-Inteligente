@@ -4,3 +4,4 @@ O objetivo desse projeto é criar um sistema de controle de tráfego urbano mais
 Projeto da matéria Engenharia de Software
 
 Link: https://vicliger.github.io/Semaforo-Inteligente/
+Link do perfil do usuário: https://semaforoautomatico.my.canva.site/
